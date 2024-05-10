@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F8C8DC;
+}
+body {
+    display: block;
+    margin: 8px;
+}
+.header_text {
+    font-family: 'Nunito';
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.gif_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div {
+    display: block;
+}
+<button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
