@@ -4,17 +4,19 @@ body {
     align-items: center;
     height: 90vh;
     background-color: #F8C8DC;
-}
-body {
     display: block;
     margin: 8px;
+}
+img {
+    width: 700px;
+    height: 500px;
 }
 .buttons {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-left: 20px;
 }
 
@@ -41,21 +43,6 @@ div {
 }
 button {
     appearance: auto;
-    font-style: ;
-    font-variant-ligatures: ;
-    font-variant-caps: ;
-    font-variant-numeric: ;
-    font-variant-east-asian: ;
-    font-variant-alternates: ;
-    font-variant-position: ;
-    font-weight: ;
-    font-stretch: ;
-    font-size: ;
-    font-family: ;
-    font-optical-sizing: ;
-    font-kerning: ;
-    font-feature-settings: ;
-    font-variation-settings: ;
     text-rendering: auto;
     color: buttontext;
     letter-spacing: normal;
@@ -89,7 +76,7 @@ button {
     font-family: 'Nunito';
     font-size: 40px;
     font-weight: bold;
-    color: white;
+    color: rgb(247, 247, 247);
     text-align: center;
     margin-top: 20px;
     margin-bottom: 0px;
@@ -103,9 +90,7 @@ h1 {
     margin-inline-end: 0px;
     font-weight: bold;
 }
-element.style {
-    : ;
-}
+
 #noButton {
     position: absolute;
     margin-left: 150px;
@@ -123,43 +108,4 @@ element.style {
     border: none;
     border-radius: 12px;
     transition: background-color 0.3s ease;
-}
-button {
-    appearance: auto;
-    font-style: ;
-    font-variant-ligatures: ;
-    font-variant-caps: ;
-    font-variant-numeric: ;
-    font-variant-east-asian: ;
-    font-variant-alternates: ;
-    font-variant-position: ;
-    font-weight: ;
-    font-stretch: ;
-    font-size: ;
-    font-family: ;
-    font-optical-sizing: ;
-    font-kerning: ;
-    font-feature-settings: ;
-    font-variation-settings: ;
-    text-rendering: auto;
-    color: buttontext;
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: center;
-    align-items: flex-start;
-    cursor: default;
-    box-sizing: border-box;
-    background-color: buttonface;
-    margin: 0em;
-    padding-block: 1px;
-    padding-inline: 6px;
-    border-width: 2px;
-    border-style: outset;
-    border-color: buttonborder;
-    border-image: initial;
 }
