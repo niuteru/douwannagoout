@@ -1,16 +1,116 @@
-<html lang="en"><head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./yes_style.css">
-    
-<style type="text/css" id="operaUserStyle"></style></head> 
+    <style>
+        .slider {
+            position: relative;
+            
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+
+        .slide {
+            min-width: 100%;
+            max-height: 100%;
+            box-sizing: border-box;
+        }
+
+        .slider img {
+            align-content: center;
+            width: 100%;
+            max-height: 1000px;
+            display: block;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            padding: 30px 40px;
+            cursor: pointer;
+            z-index: 10;
+            font-size: 24px;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .prev {
+            left: 0px;
+        }
+
+        .next {
+            right: 0px;
+        }
+
+    </style>
+</head>
 <body>
     <div class="container">
         <div>
-            <h1 class="header_text">Yeeeyyyy!!</h1>
+            <h1 class="header_text"></h1>
         </div>
-        <div class="gif_container">
-            <img src="https://media.tenor.com/qljmSb0nfXsAAAAi/kiss.gif" alt="Cute animated illustration">
+
+        <div class="slider">
+            <div class="slides" id="slides">
+                <div class="slide">
+                    <img src="https://iimg.su/s/21/th_g4uyTnzPzKcgTYIF1KEYQuMpvdLCpMmiaBth1HqQ.jpg" alt="Image 1">
+                </div>
+                <div class="slide">
+                    <img src="https://iimg.su/s/21/th_nIOcM7cTrc3DDDaZrVpEuMqzwn8EJ8yHtJPL14Ka.jpg" alt="Image 2">
+                </div>
+                <div class="slide">
+                    <img src="https://iimg.su/s/21/th_EMdS2QoKs3CHwb1gOyIbV1Gw3fFnKwX2w1hofT7O.jpg" alt="Image 3">
+                </div>
+                <div class="slide">
+                    <img src="https://iimg.su/s/21/th_1i597VqvYttfqwqLunpa4fuBeRuPDbX0oEWZi8mH.jpg" alt="Image 4">
+                </div>
+                <div class="slide">
+                    <img src="https://iimg.su/s/21/th_pgi6nzouCSyKgpZweFhy41nErwtnx7Kk3dD2wDhH.jpg" alt="Image 5">
+                </div>
+                <div class="slide">
+                    <img src="https://iimg.su/s/21/th_kHFAHWiooZTjwdzLfXwYwFhILhNnHtaOjV9PJshP.jpg" alt="Image 6">
+                </div>
+                <div class="slide">
+                    <img src="https://iimg.su/s/21/th_M7eNaNsiSrJDtf08bOSatizu0woZewuhecyXuJmJ.jpg" alt="Image 7">
+                </div>
+                <div class="slide">
+                    <img src="https://iimg.su/s/21/th_CwDTn60KSTzh6Sck51EKligy7phzE8ulYRA9MSTY.jpg" alt="Image 8">
+                </div>
+                <div class="slide">
+                    <img src="https://iimg.su/s/21/th_EhZHkeEz6qpXjwyzy1MVyN2tM5B7aM1xOQk8OYVu.jpg" alt="Image 9">
+                </div>
+            </div>
+            
         </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
     </div>
-   
- 
-</body></html>
+
+    <script>
+        let currentIndex = 0;
+
+        function moveSlide(direction) {
+            const slides = document.getElementById('slides');
+            const totalSlides = slides.children.length;
+            currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+            const offset = -currentIndex * 100;
+            slides.style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+</body>
+</html>
